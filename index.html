@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Solo Leveling : Arise</title>
+    <style>
+      .video-background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        overflow: hidden;
+      }
+
+      #video-bg {
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .game-button {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        cursor: pointer;
+        text-decoration: none !important;
+        outline: none !important;
+        font-family: "Carter One", sans-serif;
+        font-size: 20px;
+        line-height: 1.5em;
+        letter-spacing: 0.1em;
+        text-shadow: 2px 2px 1px #0066a2, -2px 2px 1px #0066a2,
+          2px -2px 1px #0066a2, -2px -2px 1px #0066a2, 0px 2px 1px #0066a2,
+          0px -2px 1px #0066a2, 0px 4px 1px #004a87, 2px 4px 1px #004a87,
+          -2px 4px 1px #004a87;
+        border: none;
+        margin: 15px 15px 30px;
+        background: repeating-linear-gradient(
+          45deg,
+          #3ebbf7,
+          #3ebbf7 5px,
+          #45b1f4 5px,
+          #45b1f4 10px
+        );
+        border-bottom: 3px solid rgba(16, 91, 146, 0.5);
+        border-top: 3px solid rgba(255, 255, 255, 0.3);
+        color: #fff !important;
+        border-radius: 8px;
+        padding: 8px 15px 10px;
+        box-shadow: 0 6px 0 #266b91, 0 8px 1px 1px rgba(0, 0, 0, 0.3),
+          0 10px 0 5px #12517d, 0 12px 0 5px #1a6b9a, 0 15px 0 5px #0c405e,
+          0 15px 1px 6px rgba(0, 0, 0, 0.3);
+      }
+      .game-button:hover {
+        top: 50.1%;
+        box-shadow: 0 4px 0 #266b91, 0 6px 1px 1px rgba(0, 0, 0, 0.3),
+          0 8px 0 5px #12517d, 0 10px 0 5px #1a6b9a, 0 13px 0 5px #0c405e,
+          0 13px 1px 6px rgba(0, 0, 0, 0.3);
+      }
+      .game-button::before {
+        content: "";
+        height: 10%;
+        position: absolute;
+        width: 40%;
+        background: #fff;
+        right: 13%;
+        top: -3%;
+        border-radius: 99px;
+      }
+      .game-button::after {
+        content: "";
+        height: 10%;
+        position: absolute;
+        width: 5%;
+        background: #fff;
+        right: 5%;
+        top: -3%;
+        border-radius: 99px;
+      }
+      .container {
+        background-color: #3ebbf7;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="video-background">
+      <video autoplay muted loop id="video-bg">
+        <source src="bg.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <div class="container">
+        <button class="game-button" id="raiseBtn">ARISE!</button><br />
+        <button class="game-button" id="donateBtn">Donate : Saweria</button
+        ><br />
+        <button class="game-button" id="donateBtn2">Donate : Paypal</button>
+      </div>
+    </div>
+  </body>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var raiseBtn = document.getElementById("raiseBtn");
+
+      raiseBtn.addEventListener("click", function () {
+        // Specify the URL you want to open
+        alert("FREE ARISE IF YOU PAY FOR IT, YOU GET SCAMMED!");
+        var urlToOpen = "EIBLoader://token=free";
+
+        // Open the URL in a new tab/window
+        window.open(urlToOpen, "_blank");
+      });
+
+      var donateBtn = document.getElementById("donateBtn");
+
+      donateBtn.addEventListener("click", function () {
+        // Specify the URL you want to open
+        var urlToOpen = "https://saweria.co/Mikaelaz";
+
+        // Open the URL in a new tab/window
+        window.open(urlToOpen, "_blank");
+      });
+
+      var donateBtn2 = document.getElementById("donateBtn2");
+
+      donateBtn2.addEventListener("click", function () {
+        // Specify the URL you want to open
+        var urlToOpen = "#";
+
+        // Open the URL in a new tab/window
+        window.open(urlToOpen, "_blank");
+      });
+    });
+  </script>
+</html>
