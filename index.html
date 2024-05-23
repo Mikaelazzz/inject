@@ -3,33 +3,39 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Solo Leveling : Arise</title>
+    <title>Button dengan Background Blur dan Transparan</title>
     <style>
-      .video-background {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: -1;
-        overflow: hidden;
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background: url("https://i.pinimg.com/originals/79/28/79/7928798bbdeda1d1cb82adb1f14e99cf.gif")
+          no-repeat center center fixed;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
       }
 
-      #video-bg {
-        min-width: 100%;
-        min-height: 100%;
-        width: auto;
-        height: auto;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+      .blur-background {
+        background: rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+
+      .button-container {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
       }
 
       .game-button {
-        position: relative;
-        top: 50%;
-        left: 50%;
+        margin: 20px;
         cursor: pointer;
         text-decoration: none !important;
         outline: none !important;
@@ -42,7 +48,6 @@
           0px -2px 1px #0066a2, 0px 4px 1px #004a87, 2px 4px 1px #004a87,
           -2px 4px 1px #004a87;
         border: none;
-        margin: 15px 15px 30px;
         background: repeating-linear-gradient(
           45deg,
           #3ebbf7,
@@ -67,75 +72,118 @@
       }
       .game-button::before {
         content: "";
-        height: 10%;
+        height: 3%;
         position: absolute;
-        width: 40%;
+        width: 20%;
         background: #fff;
-        right: 13%;
-        top: -3%;
+        right: 35%;
+        top: 21.8%;
         border-radius: 99px;
       }
       .game-button::after {
         content: "";
-        height: 10%;
+        height: 3%;
         position: absolute;
         width: 5%;
         background: #fff;
-        right: 5%;
-        top: -3%;
+        right: 29%;
+        top: 21.8%;
         border-radius: 99px;
       }
-      .container {
-        background-color: #3ebbf7;
+      .game-buttonn {
+        margin: 20px;
+        cursor: pointer;
+        text-decoration: none !important;
+        outline: none !important;
+        font-family: "Carter One", sans-serif;
+        font-size: 20px;
+        line-height: 1.5em;
+        letter-spacing: 0.1em;
+        text-shadow: 2px 2px 1px #0066a2, -2px 2px 1px #0066a2,
+          2px -2px 1px #0066a2, -2px -2px 1px #0066a2, 0px 2px 1px #0066a2,
+          0px -2px 1px #0066a2, 0px 4px 1px #004a87, 2px 4px 1px #004a87,
+          -2px 4px 1px #004a87;
+        border: none;
+        background: repeating-linear-gradient(
+          45deg,
+          #3ebbf7,
+          #3ebbf7 5px,
+          #45b1f4 5px,
+          #45b1f4 10px
+        );
+        border-bottom: 3px solid rgba(16, 91, 146, 0.5);
+        border-top: 3px solid rgba(255, 255, 255, 0.3);
+        color: #fff !important;
+        border-radius: 8px;
+        padding: 8px 15px 10px;
+        box-shadow: 0 6px 0 #266b91, 0 8px 1px 1px rgba(0, 0, 0, 0.3),
+          0 10px 0 5px #12517d, 0 12px 0 5px #1a6b9a, 0 15px 0 5px #0c405e,
+          0 15px 1px 6px rgba(0, 0, 0, 0.3);
+      }
+      .game-buttonn:hover {
+        top: 50.1%;
+        box-shadow: 0 4px 0 #266b91, 0 6px 1px 1px rgba(0, 0, 0, 0.3),
+          0 8px 0 5px #12517d, 0 10px 0 5px #1a6b9a, 0 13px 0 5px #0c405e,
+          0 13px 1px 6px rgba(0, 0, 0, 0.3);
+      }
+      .game-buttonn::before {
+        content: "";
+        height: 3%;
+        position: absolute;
+        width: 20%;
+        background: #fff;
+        right: 35%;
+        top: 59%;
+        border-radius: 99px;
+      }
+      .game-buttonn::after {
+        content: "";
+        height: 3%;
+        position: absolute;
+        width: 5%;
+        background: #fff;
+        right: 29%;
+        top: 59%;
+        border-radius: 99px;
       }
     </style>
   </head>
   <body>
-    <div class="video-background">
-      <video autoplay muted loop id="video-bg">
-        <source src="bg.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-      <div class="container">
-        <button class="game-button" id="raiseBtn">ARISE!</button><br />
-        <button class="game-button" id="donateBtn">Donate : Saweria</button
-        ><br />
-        <button class="game-button" id="donateBtn2">Donate : Paypal</button>
+    <div class="blur-background">
+      <div class="button-container">
+        <button class="game-button" id="raiseBtn">ARISE!</button>
+        <button class="game-buttonn" id="donateBtn">Donate : Saweria</button>
+        <!-- <button class="game-button2" id="donateBtn2">Donate : Paypal</button> -->
       </div>
     </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var raiseBtn = document.getElementById("raiseBtn");
+
+        raiseBtn.addEventListener("click", function () {
+          alert("FREE ARISE IF YOU PAY FOR IT, YOU GET SCAMMED!");
+          var urlToOpen = "EIBLoader://token=free";
+
+          window.open(urlToOpen, "_blank");
+        });
+
+        var donateBtn = document.getElementById("donateBtn");
+
+        donateBtn.addEventListener("click", function () {
+          var urlToOpen = "https://saweria.co/Mikaelaz";
+
+          window.open(urlToOpen, "_blank", "noopener noreferrer");
+        });
+
+        var donateBtn2 = document.getElementById("donateBtn2");
+
+        donateBtn2.addEventListener("click", function () {
+          var urlToOpen = "#";
+
+          window.open(urlToOpen, "_blank", "noopener noreferrer");
+        });
+      });
+    </script>
   </body>
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      var raiseBtn = document.getElementById("raiseBtn");
-
-      raiseBtn.addEventListener("click", function () {
-        // Specify the URL you want to open
-        alert("FREE ARISE IF YOU PAY FOR IT, YOU GET SCAMMED!");
-        var urlToOpen = "EIBLoader://token=free";
-
-        // Open the URL in a new tab/window
-        window.open(urlToOpen, "_blank");
-      });
-
-      var donateBtn = document.getElementById("donateBtn");
-
-      donateBtn.addEventListener("click", function () {
-        // Specify the URL you want to open
-        var urlToOpen = "https://saweria.co/Mikaelaz";
-
-        // Open the URL in a new tab/window
-        window.open(urlToOpen, "_blank");
-      });
-
-      var donateBtn2 = document.getElementById("donateBtn2");
-
-      donateBtn2.addEventListener("click", function () {
-        // Specify the URL you want to open
-        var urlToOpen = "#";
-
-        // Open the URL in a new tab/window
-        window.open(urlToOpen, "_blank");
-      });
-    });
-  </script>
 </html>
