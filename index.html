@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Inject Solo Leveling</title>
@@ -13,24 +13,36 @@
         margin: 0;
         padding: 0;
         font-family: "Poppins", sans-serif;
-        background: url("https://raw.githubusercontent.com/Mikaelazzz/inject/main/src/sung-jinwoo.mp4
-")
-          no-repeat center center fixed;
-        background-size: cover;
         display: flex;
         justify-content: center;
         align-items: center;
         height: 100vh;
+        overflow: hidden;
+        position: relative;
+        background-color: #000;
+      }
+
+      #background-video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        z-index: -1;
+        transform: translateX(-50%) translateY(-50%);
       }
 
       .blur-background {
         background: rgba(255, 255, 255, 0.189);
-        backdrop-filter: blur(2px);
+        backdrop-filter: blur(8px);
         -webkit-backdrop-filter: blur(8px);
         padding: 30px;
         border-radius: 12px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         text-align: center;
+        z-index: 1;
       }
 
       .button-container {
@@ -94,8 +106,12 @@
         border-radius: 99px;
       }
     </style>
-  </head>
-  <body>
+</head>
+<body>
+    <video id="background-video" autoplay loop muted>
+        <source src="https://raw.githubusercontent.com/Mikaelazzz/inject/main/src/sung-jinwoo.mp4" type="video/mp4">
+        Browser Anda tidak mendukung tag video.
+    </video>
     <div class="blur-background">
       <div class="button-container">
         <button class="game-button" id="raiseBtn">START</button>
@@ -125,5 +141,5 @@
         });
       });
     </script>
-  </body>
+</body>
 </html>
